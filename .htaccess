@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /coda_school/
+
+# Enlève l'extension .php des URLs
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Redirection des anciennes URLs avec .php vers les nouvelles sans .php
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[?\s] [NC]
+RewriteRule ^([^.]+)\.php$ /coda_school/$1 [R=301,L]
