@@ -9,7 +9,11 @@ require 'include/database.php';
         <title></title>
     </head>
     <body>
-
+        <div class="container">
+            <?php
+                require 'controller/login.php';
+            ?>
+        </div>
         <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
