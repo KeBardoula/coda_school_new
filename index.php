@@ -10,6 +10,7 @@ require 'include/database.php';
     </head>
     <body>
         <div class="container">
+            <h1>Connexion</h1>
             <?php
                 require 'controller/login.php';
             ?>
