@@ -8,7 +8,7 @@
             <th scope="col">ID</th>
             <th scope="col">Username</th>
             <th scope="col">E-mail</th>
-            <th scope="col">Enabled</th>
+            <th scope="col">Actif</th>
         </tr>
         </thead>
         <tbody>
