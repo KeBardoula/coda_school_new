@@ -8,5 +8,5 @@
 		<label for="pass" class="form-label">Mot de passe</label>
 		<input type="password" class="form-control" name="pass" id="pass" required>
 	</div>
-	<button type="submit" class="btn btn-primary" name="login_button" id="login_button">Valider</button>
+	<button type="submit" class="btn btn-primary" name="login_button" id="login_button">Connexion</button>
 </form>

@@ -1,5 +1,5 @@
 <?php
-	global $pdo; // Assurez-vous que cette ligne est présente pour accéder à la variable globale.
+	global $pdo;
 	
 	require "Model/login.php";
 	
