@@ -15,9 +15,11 @@
 				$user = getUser($pdo, $username);
 				$isMatchPassword = is_array($user) && password_verify($pass, $user['password']);
 				
-				if ($isMatchPassword) {
+				if ($isMatchPassword && $user['enabled']) {
 					$_SESSION['auth'] = true;
 					header('location: index.php');
+				} elseif (!$user['enabled']) {
+					$errors[] = 'Votre compte est désactiver';
 				} else {
 					$errors[] = 'identification échouée';
 				}
