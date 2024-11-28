@@ -1,4 +1,4 @@
-
+<h1 class="text-center">Connexion</h1>
 <form method="post">
 	<div class="mb-3">
 		<label for="username" class="form-label">Identifiant</label>

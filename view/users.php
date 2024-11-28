@@ -17,9 +17,9 @@
                 <td><?php echo $user['id']; ?></td>
                 <td><?php echo $user['username']; ?></td>
                 <td><?php echo $user['email']; ?></td>
-                <a href="">
+                <a href="index.php?component=users&action=toggle_enabled&id=<? echo $user['id']; ?>">
                     <td>
-                        <i class="fa-solid <?php echo ($user['enabled']) ? 'fa-check text-success' : 'fa-xmark text-danger'; ?>"></i>
+                        <i class="fa-solid <?php echo $user['enabled'] ? 'fa-check text-success' : 'fa-xmark text-danger'; ?>"></i>
                     </td>
                 </a>
             </tr>
