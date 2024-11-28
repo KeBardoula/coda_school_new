@@ -1,5 +1,30 @@
 <?php
-    require "model/login.php";
-
-    require "view/login.php";
+	global $pdo; // Assurez-vous que cette ligne est présente pour accéder à la variable globale.
+	
+	require "Model/login.php";
+	
+	if (isset($_POST['login_button'])) {
+		$username = !empty($_POST['username']) ? $_POST['username'] : null;
+		$pass = !empty($_POST['pass']) ? $_POST['pass'] : null;
+		
+		if (!empty($username) && !empty($pass)) {
+			$username = cleanString($username);
+			$pass = cleanString($pass);
+			
+			if (isset($pdo)) {
+				$user = getUser($pdo, $username);
+				$isMatchPassword = is_array($user) && password_verify($pass, $user['password']);
+				
+				if ($isMatchPassword) {
+					$_SESSION['auth'] = true;
+				} else {
+					$errors[] = 'identification échouée';
+				}
+			} else {
+				$errors[] = 'Connexion à la base de données non disponible';
+			}
+		}
+	}
+	
+	require "View/login.php";
 ?>
