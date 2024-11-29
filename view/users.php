@@ -22,11 +22,11 @@
             </div>
             <div class="mb-3 form-check form-switch">
                 <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="enabled"
-                        name="enabled"
-                        <?php echo ($user['id'] === $_SESSION['user_id']) ? 'disabled' : null; ?>
+                    type="checkbox"
+                    class="form-check-input"
+                    id="enabled"
+                    name="enabled"
+                    <?php echo ($user['id'] === $_SESSION['user_id']) ? 'disabled' : null; ?>
                     <?php  echo (isset($user['enabled']) && $user['enabled']) ? 'checked' : null; ?>
                 >
                 <label class="form-check-label" for="enabled">Actif</label>
@@ -51,10 +51,26 @@
         <table class="table table-striped">
             <thead>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Username</th>
-                <th scope="col">E-mail</th>
-                <th scope="col">Actif</th>
+                <th scope="col">
+                    <a href="<?php echo BASE_URL_USERS . '&orderby=id'; ?>">
+                        ID
+                    </a>
+                </th>
+                <th scope="col">
+                    <a href="<?php echo BASE_URL_USERS . '&orderby=username'; ?>">
+                        Username
+                    </a>
+                </th>
+                <th scope="col">
+                    <a href="<?php echo BASE_URL_USERS . '&orderby=email'; ?>">
+                        E-mail
+                    </a>
+                </th>
+                <th scope="col">
+                    <a href="<?php echo BASE_URL_USERS . '&orderby=actif'; ?>">
+                        Actif
+                    </a>
+                </th>
                 <th scope="col">Action</th>
             </tr>
             </thead>
