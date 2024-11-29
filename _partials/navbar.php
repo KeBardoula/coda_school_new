@@ -14,7 +14,8 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-	Dropdown
+            <i class="fa-solid fa-user"></i>
+            <?php echo $_SESSION['username']; ?>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>

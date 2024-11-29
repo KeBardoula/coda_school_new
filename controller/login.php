@@ -17,6 +17,8 @@
 				
 				if ($isMatchPassword && $user['enabled']) {
 					$_SESSION['auth'] = true;
+					$_SESSION['user_id'] = $user['id'];
+					$_SESSION['username'] = $user['username'];
 					header('location: index.php');
 				} elseif (!$user['enabled']) {
 					$errors[] = 'Votre compte est désactiver';
